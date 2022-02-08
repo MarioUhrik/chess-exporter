@@ -47,7 +47,7 @@ class ChessMetrics:
         try:
             resp = requests.get(url=f"https://api.chess.com/pub/leaderboards")
             status_data = resp.json()
-        except Exception as e:
+        except requests.exceptions.RequestException as e:
             print(e)
             return []
 
@@ -74,7 +74,7 @@ class ChessMetrics:
                 try:
                     resp = requests.get(url=f"https://api.chess.com/pub/player/{player_name}/is-online")
                     status_data = resp.json()
-                except Exception as e:
+                except requests.exceptions.RequestException as e:
                     print(e)
                     self.player_stats["online"].labels(player_name).state("unknown")
                     continue
@@ -96,7 +96,7 @@ class ChessMetrics:
             try:
                 resp = requests.get(url=f"https://api.chess.com/pub/player/{player_name}/stats")
                 status_data = resp.json()
-            except Exception as e:
+            except requests.exceptions.RequestException as e:
                 print(e)
                 continue
 
