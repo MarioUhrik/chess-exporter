@@ -1,10 +1,10 @@
 # chess-exporter
-**Prometheus exporter for chess.com player data implemented via [chess.com's published data API](https://www.chess.com/news/view/published-data-api) and [Prometheus Python Client](https://github.com/prometheus/client_python)**
+**Prometheus exporter for [chess.com](https://www.chess.com) player data implemented via [chess.com's published data API](https://www.chess.com/news/view/published-data-api) and [Prometheus Python Client](https://github.com/prometheus/client_python)**
 
 Example use cases:
-- Track chess.com player ratings (and more) in your own [Prometheus](https://github.com/prometheus/prometheus) database
-- Set up an [Alertmanager](https://github.com/prometheus/alertmanager) alert for when someone goes above 3000 rating in rapid
-- Create a [Grafana](https://github.com/grafana/grafana) dashboard for conveniently viewing chess data of your favourite players
+- Track [chess.com](https://www.chess.com) player ratings (and more) in your own [Prometheus](https://github.com/prometheus/prometheus) database
+- Set up an [Alertmanager](https://github.com/prometheus/alertmanager) alert for when someone goes above 3000 rating in rapid on [chess.com](https://www.chess.com)
+- Create a [Grafana](https://github.com/grafana/grafana) dashboard for conveniently viewing chess data of your favourite players on [chess.com](https://www.chess.com)
 
 ### Available metrics
 
