@@ -31,3 +31,7 @@ chess_online{chess_online="unknown",playerName="playerName"} | online status of 
 Chess-exporter is highly configurable via environment variables, and a configuration file.
 - The [configuration file](https://github.com/MarioUhrik/chess-exporter/blob/main/manifests/conf/config.yaml) controls which metrics to track, and for which players
 - The [environment variables](https://github.com/MarioUhrik/chess-exporter/blob/main/manifests/deployment.yaml) control a set of particular backend settings which you probably won't need to modify
+
+---
+
+Inspired by https://trstringer.com/quick-and-easy-prometheus-exporter/
