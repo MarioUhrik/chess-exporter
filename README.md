@@ -6,6 +6,16 @@ Example use cases:
 - Set up an [Alertmanager](https://github.com/prometheus/alertmanager) alert for when someone goes above 3000 rating in rapid on [chess.com](https://www.chess.com)
 - Create a [Grafana](https://github.com/grafana/grafana) dashboard for conveniently viewing chess data of your favourite players on [chess.com](https://www.chess.com)
 
+### Deployment into Kubernetes
+
+Simply deploy the Kubernetes manifests in the `manifests` folder.
+Have a look at `kustomization.yaml` first.
+Ensure that `namespace` suits you, and optionally uncomment `servicemonitor.yaml`.
+
+```
+kubectl apply -k manifests
+```
+
 ### Available metrics
 
 Metric name | description | values |
