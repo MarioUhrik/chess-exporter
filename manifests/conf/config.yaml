@@ -1,0 +1,24 @@
+chess_exporter:
+  global_filters:
+    online: false # disable/enable player online/offline activity tracking. The API endpoint has been disabled and doesn't work. https://www.chess.com/clubs/forum/view/api-rfc-deprecate-and-remove-is-online-endpoint
+    rapid: true # disable/enable player rapid chess tracking
+    blitz: true # disable/enable player blitz chess tracking
+    bullet: true # disable/enable player bullet chess tracking
+  player_stats:
+    leaderboards:
+      live_rapid: # leaderboard name must match the leaderboard name in the output of https://api.chess.com/pub/leaderboards
+        top: 7 # display player stats of the top N players in the leaderboard. Must be <= 50
+      live_blitz: # leaderboard name must match the leaderboard name in the output of https://api.chess.com/pub/leaderboards
+        top: 5 # display player stats of the top N players in the leaderboard. Must be <= 50
+      live_bullet: # leaderboard name must match the leaderboard name in the output of https://api.chess.com/pub/leaderboards
+        top: 3 # display player stats of the top N players in the leaderboard. Must be <= 50
+      daily: # leaderboard name must match the leaderboard name in the output of https://api.chess.com/pub/leaderboards
+        top: 0 # display player stats of the top N players in the leaderboard. Must be <= 50
+    players: # list of additional players to track
+    - fordragonfolley
+    - giogiobeta
+    - Sakelarov
+    - Hikaru
+    - MagnusCarlsen
+    - GothamChess
+    - AlexandraBotez

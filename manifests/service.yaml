@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: chess-exporter
+  labels:
+    app: chess-exporter
+spec:
+  selector:
+    app: chess-exporter
+  ports:
+  - name: http
+    port: 80
+    targetPort: http

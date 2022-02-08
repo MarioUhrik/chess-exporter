@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: chess-exporter
+  labels:
+    app: chess-exporter
+spec:
+  selector:
+    matchLabels:
+      app: chess-exporter
+  endpoints:
+  - port: http
+    interval: 30s
+    honorLabels: true

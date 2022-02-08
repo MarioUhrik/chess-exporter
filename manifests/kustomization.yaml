@@ -1,0 +1,17 @@
+namespace: monitoring # Please edit. Either choose any existing namespace in your cluster, or create a brand new one.
+
+resources:
+- deployment.yaml
+- service.yaml
+### Uncomment the following line if you're running Prometheus Operator,
+### and if you'd like to configure your Prometheus to scrape metrics from chess-exporter.
+# - servicemonitor.yaml
+
+configMapGenerator:
+- name: chess-exporter-conf
+  files:
+  - config.yaml=conf/config.yaml
+
+images:
+- name: mariouhrik/chess-exporter
+  newTag: latest

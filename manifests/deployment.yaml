@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chess-exporter
+spec:
+  selector:
+    matchLabels:
+      app: chess-exporter
+  template:
+    metadata:
+      labels:
+        app: chess-exporter
+    spec:
+      containers:
+      - name: chess-exporter
+        image: mariouhrik/chess-exporter
+        imagePullPolicy: Always
+        env:
+        - name: CHESSEXPORTER_POLLING_INTERVAL_SECONDS
+          value: "20"
+        - name: CHESSEXPORTER_CONFIG_FILE_LOCATION
+          value: "/app/conf/config.yaml"
+        - name: CHESSEXPORTER_METRICS_PORT
+          value: "80"
+        resources:
+          requests:
+            memory: 100Mi
+            cpu: 40m
+          limits:
+            memory: 400Mi
+            cpu: 150m
+        livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+        readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+        volumeMounts:
+        - name: chess-exporter-conf
+          mountPath: /app/conf
+        ports:
+        - name: http
+          containerPort: 80
+      volumes:
+      - name: chess-exporter-conf
+        configMap:
+          name: chess-exporter-conf
