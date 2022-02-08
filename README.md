@@ -1,5 +1,5 @@
 # chess-exporter
-**Prometheus exporter for chess.com player data implemented via [chess.com's published data API](https://www.chess.com/news/view/published-data-api)**
+**Prometheus exporter for chess.com player data implemented via [chess.com's published data API](https://www.chess.com/news/view/published-data-api) and [Prometheus Python Client](https://github.com/prometheus/client_python)**
 
 Example use cases:
 - Track chess.com player ratings (and more) in your own [Prometheus](https://github.com/prometheus/prometheus) database
