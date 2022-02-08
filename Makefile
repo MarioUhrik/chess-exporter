@@ -12,7 +12,7 @@ minikube-deploy:
 	kubectl apply -k manifests
 
 	@echo "-----------------------TEST ENVIRONMENT SETUP COMPLETED SUCCESSFULLY----------------------------"
-	@echo "You can the following command:"
+	@echo "You can run the following command:"
 	@echo ""
 	@echo "              kubectl -n monitoring port-forward svc/prometheus-operated 9090:9090"
 	@echo ""
