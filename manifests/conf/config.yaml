@@ -15,9 +15,6 @@ chess_exporter:
       daily: # leaderboard name must match the leaderboard name in the output of https://api.chess.com/pub/leaderboards
         top: 0 # display player stats of the top N players in the leaderboard. Must be <= 50
     players: # list of additional players to track
-    - fordragonfolley
-    - giogiobeta
-    - Sakelarov
     - Hikaru
     - MagnusCarlsen
     - GothamChess
